@@ -19,7 +19,7 @@ Ingredients:
 Steps:
 - Upload all your samples to a folder in Google Drive
 
-![Screenshot showing some Au5 bass loops in a Google Drive folder](https://raw.githubusercontent.com/lyramakesmusic/music_ai_101/blob/main/dd_dataset_in_drive.png)
+![Screenshot showing some Au5 bass loops in a Google Drive folder](https://raw.githubusercontent.com/lyramakesmusic/music_ai_101/main/dd_dataset_in_drive.png)
 
 - In the finetuning notebook, change `TRAINING_DIR` to the path to that folder, making sure it matches the format `/content/drive/MyDrive/your_folder_here`
 
