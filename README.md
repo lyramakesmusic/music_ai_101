@@ -19,16 +19,21 @@ Ingredients:
 Steps:
 - Upload all your samples to a folder in Google Drive
 - In the finetuning notebook, change `TRAINING_DIR` to the path to that folder, making sure it matches the format `/content/drive/MyDrive/your_folder_here`
-- Adjust `SAMPLE_RATE` and `SAMPLE_SIZE` - you should match the sample rate of your training audio. The default `SAMPLE_SIZE` gives ~1.5 seconds of audio, doubling it to 131072 gives you ~2.5-3 seconds at the cost of more training & inference time. You can also change the run name if you like. 
+[Screenshot showing a different training dir in the notebook](https://github.com/lyramakesmusic/music_ai_101/blob/main/dd_data_path.png)
+- Adjust `SAMPLE_RATE` and `SAMPLE_SIZE` - you should match the sample rate of your training audio. The default `SAMPLE_SIZE` gives ~1.5 seconds of audio, doubling it to 131072 gives you ~2.5-3 seconds at the cost of more training & inference time. You can also change the run name if you like.
+[Screenshot showing altered sample rate and length](https://github.com/lyramakesmusic/music_ai_101/blob/main/dd_sample_info.png)
 - You should probably make a [wandb](https://wandb.ai/) account, it will let you track the model progress as it trains and displays generated samples during training. The numbers will often be all over the place, so ear test (listening to the demos) is your best indicator of actual progress. The notebook should guide you through what to do with the account, and you can always skip this also (but the demos are really nice!).
 - Press all the run buttons in the notebook from top down, starting with `Check GPU Status`. Follow any additional prompts it gives you as it runs, but it should be mostly hands-free after the last cell has started. Now.... you wait. It takes a few hours to train, typically. My longest training run lasted 3 days, and my shortest was 1.5 hours.
 - If you click the wandb link it gave you, you'll hear the first batch of demos- they're generated before it starts training on your sound, so be patient and wait for the next demos 250 steps later.
+[Screenshot of wandb showing a demo audio](https://github.com/lyramakesmusic/music_ai_101/blob/main/dd_wandb_demo.png)
+
 - After every 500 steps, a copy of the trained model will be saved to your Google Drive, in `/content/drive/MyDrive/AI/models/DanceDiffusion/finetune` or whatever you might possibly have changed that line to. You'll be able to download this and run it locally (after writing some inference code and installing pytorch with gpu etc), or point the inference notebook to that checkpoint using the `model_name` = Custom and changing the sample params to match how you trained it.
 - Inference: [TBA]
 
 #### Training (and running) Musicgen
 
 [Detailed explanation](https://colab.research.google.com/drive/13tbcC3A42KlaUZ21qvUXd25SFLu8WIvb), [I just want to run it](https://colab.research.google.com/drive/1VX8tMAfyWVEHZiyviuovUgKXq1GpKcdR)
+[Screenshot of the Musicgen Training colab, showing detailed explanations of dataset setup and training VRAM requirements](https://github.com/lyramakesmusic/music_ai_101/blob/main/musicgen_notebook.png)
 
 #### Training (and running) Stable Audio
 
