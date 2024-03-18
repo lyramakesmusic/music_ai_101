@@ -70,4 +70,12 @@ Literally just sample from them. Make some snares with Dance Diffusion. Paulstre
 
 ### How do these models even work??
 
-Oh boy here we go. I should go add some images to previous sections first....
+Oh boy here we go. [TBA later, there's many details to figure out how to communicate]
+
+#### Autoencoders
+
+![Diagram showing architecture of an Autoencoder, with identical data on each side being compressed into a latent representation aka bottleneck](https://lilianweng.github.io/lil-log/assets/images/autoencoder-architecture.png)
+
+#### Diffusion
+
+![GIF of RGB noise being gradually denoised into a satellite image of a house](https://aurorasolar.com/wp-content/uploads/2022/07/Roof-Deepfakes-64-steps.gif)
