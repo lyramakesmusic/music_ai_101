@@ -74,7 +74,7 @@ Oh boy here we go. [TBA later, there's many details to figure out how to communi
 
 #### Autoencoders
 
-![Diagram showing architecture of an Autoencoder, with identical data on each side being compressed into a latent representation aka bottleneck](https://lilianweng.github.io/lil-log/assets/images/autoencoder-architecture.png)
+![Diagram showing architecture of an Autoencoder, with identical data on each side being compressed into a latent representation](https://miro.medium.com/v2/resize:fit:600/1*nqzWupxC60iAH2dYrFT78Q.png)
 
 #### Diffusion
 
