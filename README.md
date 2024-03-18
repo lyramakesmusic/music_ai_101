@@ -39,15 +39,21 @@
 
 ![Screenshot of wandb showing a demo audio](https://raw.githubusercontent.com/lyramakesmusic/music_ai_101/main/dd_wandb_demo.png)
 
-- After every 500 steps, a copy of the trained model will be saved to your Google Drive, in `/content/drive/MyDrive/AI/models/DanceDiffusion/finetune` or whatever you might possibly have changed that line to. You'll be able to download this and run it locally (after writing some inference code and installing pytorch with gpu etc), or point the inference notebook to that checkpoint using the `model_name` = Custom and changing the sample params to match how you trained it.
+- After every 500 steps, a copy of the trained model will be saved to your Google Drive, in `/content/drive/MyDrive/AI/models/DanceDiffusion/finetune` or whatever you might possibly have changed that line to. You'll be able to download this and run it locally (after writing some inference code and installing pytorch with gpu etc), or point the inference notebook to that checkpoint.
 
 ![Screenshot of Google Drive showing a trained ckpt](https://raw.githubusercontent.com/lyramakesmusic/music_ai_101/main/dd_ckpt_in_drive.png)
 
-- Inference: [TBA]
+- Inference: You'll need to run the [Inference notebook](https://colab.research.google.com/github/Harmonai-org/sample-generator/blob/main/Dance_Diffusion.ipynb) also linked above. Scroll down to the "Create the Model" section, change the model type to "Custom" and link the trained checkpoint using the same `/content/Drive/MyDrive/` format. You'll need to remember what sample rate and length you trained it on, because the inference notebook defaults to 65536@16k- your model should be in the ballpark of 65536@44100 or 131072@48k. Go ahead and put those values in.
+
+  ![Screenshot of the Dance Diffusion inference notebook showing the model selection dropdown set to Custom](https://raw.githubusercontent.com/lyramakesmusic/music_ai_101/main/dd_infer_custom_model.png)
+
+Run all the cells, again starting at the top, and going down to `Generate new sounds`. The ones below that are for different types of inference, ie audio2audio, we don't need those to run. I do recommend playing with them, they can make some cool stuff, but not needed just to get sounds. Enjoy your samples!
 
 ### Training (and running) Musicgen
 
 [Detailed explanation](https://colab.research.google.com/drive/13tbcC3A42KlaUZ21qvUXd25SFLu8WIvb), [I just want to run it](https://colab.research.google.com/drive/1VX8tMAfyWVEHZiyviuovUgKXq1GpKcdR)
+
+Info on training this model is outside the scope of this readme, a detailed guide (screenshot below) is linked above. If you want to finetune without bothering with technical setup, you can use the second link to finetune with a youtube playlist link. If you want to just run it without finetuning, you can use the [Musicgen Huggingface space](https://huggingface.co/spaces/facebook/MusicGen). 
 
 ![Screenshot of the Musicgen Training colab, showing detailed explanations of dataset setup and training VRAM requirements](https://raw.githubusercontent.com/lyramakesmusic/music_ai_101/main/musicgen_notebook.png)
 
