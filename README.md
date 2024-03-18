@@ -47,7 +47,17 @@
 
   ![Screenshot of the Dance Diffusion inference notebook showing the model selection dropdown set to Custom](https://raw.githubusercontent.com/lyramakesmusic/music_ai_101/main/dd_infer_custom_model.png)
 
-Run all the cells, again starting at the top, and going down to `Generate new sounds`. The ones below that are for different types of inference, ie audio2audio, we don't need those to run. I do recommend playing with them, they can make some cool stuff, but not needed just to get sounds. Enjoy your samples!
+Run all the cells, again starting at the top, and going down to `Generate new sounds`. The ones below that are for different types of inference, ie audio2audio, we don't need those to run. I do recommend playing with them, they can make some cool stuff, but not needed just to get sounds. Enjoy your samples! If you want to use some pretrained models before trying to finetune your own, here are a few I trained: 
+
+| Model      | Sample Length | Sample Rate | Finetuning Steps | Link |
+| ----------- | ----------- | ----------- | ----------- |----------- |
+| Neuro & dubstep basses | 131072 | 44100 | 6500 steps | [Download](https://drive.google.com/file/d/1-IL74bhrZKrYbjfmEmG70dEWezFfxJgW/view?usp=sharing) (3.3GB)|
+| Drum fills   | 131072 | 44100 | 1500 steps | [Download](https://drive.google.com/file/d/1-B2S1AhyDz4eMK9n3xRnPclW4OzV7lLf/view?usp=sharing) (3.3GB)        |
+| Hardstyle kicks | 65536 | 44100 | 5500 steps | [Download](https://drive.google.com/file/d/1-S6gGj5qW1mKQP4yxNyO4XXpUzZkjYsU/view?usp=sharing) (3.3GB)  |
+| Top loops | 131072 | 44100 | 3500 steps | [Download](https://drive.google.com/file/d/1-IMK47o1HhqCSHoolsEx-cKnIijkrDDC/view?usp=sharing) (3.3GB) |
+| Snares | 65536 | 44100 | 0 steps | Download (3.3GB) |
+
+Quality *will* vary! You'll need to do multiple generations and manually slice up the samples for good results.
 
 ### Training (and running) Musicgen
 
