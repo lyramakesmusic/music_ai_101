@@ -18,6 +18,9 @@ Ingredients:
 
 Steps:
 - Upload all your samples to a folder in Google Drive
+
+![Screenshot showing some Au5 bass loops in a Google Drive folder](https://raw.githubusercontent.com/lyramakesmusic/music_ai_101/blob/main/dd_dataset_in_drive.png)
+
 - In the finetuning notebook, change `TRAINING_DIR` to the path to that folder, making sure it matches the format `/content/drive/MyDrive/your_folder_here`
 
 ![Screenshot showing a different training dir in the notebook](https://raw.githubusercontent.com/lyramakesmusic/music_ai_101/main/dd_data_path.png)
@@ -27,12 +30,21 @@ Steps:
 ![Screenshot showing altered sample rate and length](https://raw.githubusercontent.com/lyramakesmusic/music_ai_101/main/dd_sample_info.png)
 
 - You should probably make a [wandb](https://wandb.ai/) account, it will let you track the model progress as it trains and displays generated samples during training. The numbers will often be all over the place, so ear test (listening to the demos) is your best indicator of actual progress. The notebook should guide you through what to do with the account, and you can always skip this also (but the demos are really nice!).
-- Press all the run buttons in the notebook from top down, starting with `Check GPU Status`. Follow any additional prompts it gives you as it runs, but it should be mostly hands-free after the last cell has started. Now.... you wait. It takes a few hours to train, typically. My longest training run lasted 3 days, and my shortest was 1.5 hours.
+
+![Screenshot of wandb asking for authorization](https://raw.githubusercontent.com/lyramakesmusic/music_ai_101/main/dd_wandb_login.png)
+  
+- Press all the run buttons in the notebook from top down, starting with `Check GPU Status`. Follow any additional prompts it gives you as it runs, but it should be mostly hands-free after the last cell has started. Now.... you wait. It takes a few hours to train, typically. My longest training run lasted 3 days, and my shortest was 1.5 hours. If everything worked correctly, colab should output this:
+
+![Screenshot of Dance Diffusion successfully running](https://raw.githubusercontent.com/lyramakesmusic/music_ai_101/main/dd_running.png)
+
 - If you click the wandb link it gave you, you'll hear the first batch of demos- they're generated before it starts training on your sound, so be patient and wait for the next demos 250 steps later.
 
 ![Screenshot of wandb showing a demo audio](https://raw.githubusercontent.com/lyramakesmusic/music_ai_101/main/dd_wandb_demo.png)
 
 - After every 500 steps, a copy of the trained model will be saved to your Google Drive, in `/content/drive/MyDrive/AI/models/DanceDiffusion/finetune` or whatever you might possibly have changed that line to. You'll be able to download this and run it locally (after writing some inference code and installing pytorch with gpu etc), or point the inference notebook to that checkpoint using the `model_name` = Custom and changing the sample params to match how you trained it.
+
+![Screenshot of Google Drive showing a trained ckpt](https://raw.githubusercontent.com/lyramakesmusic/music_ai_101/main/dd_ckpt_in_drive.png)
+
 - Inference: [TBA]
 
 #### Training (and running) Musicgen
