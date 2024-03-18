@@ -10,6 +10,10 @@
 - **Demucs** is a stem splitter. Given a mixed input track, it tries to separate it into 4 stems (Drums, Bass, Vocals, Other) that mix together into the original track. It does leave pretty bad compression artifacts, but works well enough to use for bootleg remixes. FL Studio 21 has it built in as [Stem Separator](https://www.image-line.com/fl-studio-learning/fl-studio-online-manual/html/playlist.htm#audio_clip_extractstems), and there's a variety of options if you use a different DAW. There are websites you can pay for that do this, like lalal.ai and similar, but there's no need if you have a decent GPU- instead you can download **[Ultimate Vocal Remover aka UVR5](https://ultimatevocalremover.com/)** which is 100% free and has a wide variety of splitting options. Not only does it have Demucs (change Process Method to `Demucs` and Demucs Model to `v4 | htdemucs`), it also has DeReverb models that will try and remove reverb/echo/ambiance from a track. You get these by clicking `Download More Models` and selecting an arch/model from the radio/dropdowns. A couple of the DeReverb models are `MDX-Net Model: Reverb HQ by FoxJoy` and `UVR-DeEcho-DeReverb`. These models are crazy fun, and I'd recommend trying a variety of them to get familiar.
 - **RVC** is a voice transfer model. This is how everyone is making those Minecraft Villager remixes, or Squidward singing, or those Presidents saying dumb stuff Youtube shorts. You can download (and use!!) models for specific voices **[from this site (voice-models.com)](https://voice-models.com/)**. If you click the `Run` button next to a voice and sign in to the site that appears, you can run them without code or fancy setup, but you can also run it in Colab or similar. There are a wide variety of notebooks available for that, googling "RVC inference colab" gives you a bunch of options. I ran into environment errors installing `RVC-webui` locally, weird dependency conflicts that I was unable to easily resolve. If you're just looking to run it a couple times, just use the site above- it's much easier than dealing with uploading checkpoints to colab or solving weird code bugs. 
 
+### What do I do with these models?
+
+Literally just sample from them. Make some snares with Dance Diffusion. Paulstretch some Stable Audio outputs into a weird pad. Tune Musicgen on top loops. Send VR Bass loops through RVC Squidward and distort them. Generate some DnB with Google's [MusicFX](https://aitestkitchen.withgoogle.com/tools/music-fx) and replace every single sound with your own. Make a Mariah Carey riddim remix with Demucs stems. You're a producer, you know what to do, just have fun!
+
 ## Training Recipes
 
 ### Training (and running) Dance Diffusion
@@ -79,10 +83,6 @@ Info on training this model is outside the scope of this readme, a detailed guid
 [Stable Audio Tools repo](https://github.com/Stability-AI/stable-audio-tools)
 
 There's no Stable Audio model weights currently available, this section will be updated on model release. I could explain the tuning process already, but it won't be very useful without weights since training from scratch is ***very expensive***
-
-### What do I do with these models?
-
-Literally just sample from them. Make some snares with Dance Diffusion. Paulstretch some Stable Audio outputs into a weird pad. Tune Musicgen on top loops. Send VR Bass loops through RVC Squidward and distort them. Generate some DnB with Google's [MusicFX](https://aitestkitchen.withgoogle.com/tools/music-fx) and replace every single sound with your own. Make a Mariah Carey riddim remix with Demucs stems. You're a producer, you know what to do, just have fun!
 
 ## Info for Nerds
 
