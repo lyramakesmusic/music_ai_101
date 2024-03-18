@@ -9,12 +9,12 @@
 
 [Finetuning notebook](https://colab.research.google.com/github/Harmonai-org/sample-generator/blob/main/Finetune_Dance_Diffusion.ipynb), [Inference notebook](https://colab.research.google.com/github/Harmonai-org/sample-generator/blob/main/Dance_Diffusion.ipynb)
 
-Ingredients:
+**Ingredients**:
 - At least 100 audio samples (preferably closer to 1000)
 - The Finetuning notebook linked above
 - A Google account (you'll need Drive and Colab)
 
-Steps:
+**Steps**:
 - Upload all your samples to a folder in Google Drive
 
 ![Screenshot showing some Au5 bass loops in a Google Drive folder](https://raw.githubusercontent.com/lyramakesmusic/music_ai_101/main/dd_dataset_in_drive.png)
